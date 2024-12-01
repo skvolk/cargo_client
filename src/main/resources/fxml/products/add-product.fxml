@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.api.cargosimpleclient.Controllers.Products.AddProductController"
+      spacing="15"
+      alignment="CENTER"
+      styleClass="login-form">
+
+    <Label text="Добавление товара" styleClass="login-title"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <VBox spacing="10" styleClass="form-content">
+        <Label text="Артикул:" styleClass="form-label"/>
+        <TextField fx:id="articleNumberField"
+                   promptText="Введите артикул (8 символов)"
+                   styleClass="text-field"/>
+
+        <Label text="Наименование:" styleClass="form-label"/>
+        <TextField fx:id="nameField"
+                   promptText="Введите наименование"
+                   styleClass="text-field"/>
+
+        <Label text="Описание:" styleClass="form-label"/>
+        <TextField fx:id="descriptionField"
+                   promptText="Введите описание"
+                   styleClass="text-field"/>
+
+        <Label text="Категория:" styleClass="form-label"/>
+        <TextField fx:id="categoryField"
+                   promptText="Введите категорию"
+                   styleClass="text-field"/>
+
+        <Label text="Производитель:" styleClass="form-label"/>
+        <TextField fx:id="manufacturerField"
+                   promptText="Введите производителя"
+                   styleClass="text-field"/>
+
+        <Label text="Цена закупки:" styleClass="form-label"/>
+        <TextField fx:id="purchasePriceField"
+                   promptText="Введите цену закупки"
+                   styleClass="text-field"/>
+
+        <Label text="Цена продажи:" styleClass="form-label"/>
+        <TextField fx:id="sellingPriceField"
+                   promptText="Введите цену продажи"
+                   styleClass="text-field"/>
+
+        <Label text="Мин. уровень на складе:" styleClass="form-label"/>
+        <TextField fx:id="minStockLevelField"
+                   promptText="Введите мин. уровень"
+                   styleClass="text-field"/>
+
+        <Label text="Макс. уровень на складе:" styleClass="form-label"/>
+        <TextField fx:id="maxStockLevelField"
+                   promptText="Введите макс. уровень"
+                   styleClass="text-field"/>
+    </VBox>
+
+    <HBox spacing="15" alignment="CENTER" styleClass="buttons-container">
+        <Button text="Сохранить"
+                onAction="#handleSaveProduct"
+                styleClass="button"/>
+
+        <Button text="Отмена"
+                onAction="#closeDialog"
+                styleClass="secondary-button"/>
+    </HBox>
+</VBox>

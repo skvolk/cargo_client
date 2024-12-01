@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.Label?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.api.cargosimpleclient.Controllers.RegisterController"
+      alignment="CENTER"
+      spacing="15"
+      styleClass="register-form">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label
+            text="Регистрация в системе"
+            styleClass="login-title"
+            style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <TextField
+            fx:id="usernameField"
+            promptText="Логин"
+            maxWidth="300"/>
+
+    <PasswordField
+            fx:id="passwordField"
+            promptText="Пароль"
+            maxWidth="300"/>
+
+    <PasswordField
+            fx:id="confirmPasswordField"
+            promptText="Подтвердите пароль"
+            maxWidth="300"/>
+
+    <Button
+            text="Зарегистрироваться"
+            onAction="#handleRegister"
+            fx:id="registerButton"
+            maxWidth="300"/>
+
+    <Button
+            text="Назад к входу"
+            onAction="#backToLogin"
+            maxWidth="300"
+            styleClass="secondary-button"/>
+</VBox>

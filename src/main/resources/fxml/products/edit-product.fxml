@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.api.cargosimpleclient.Controllers.Products.EditProductController"
+      alignment="CENTER"
+      styleClass="root">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Редактирование товара" styleClass="title-label"/>
+
+    <GridPane hgap="10" vgap="10" styleClass="grid-pane">
+        <Label text="Артикул:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="articleNumberField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="0"
+                   styleClass="text-field"
+                   HBox.hgrow="ALWAYS"/>
+
+        <Label text="Название:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="nameField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="1"
+                   styleClass="text-field"/>
+
+        <Label text="Описание:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="descriptionField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="2"
+                   styleClass="text-field"/>
+
+        <Label text="Категория:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="categoryField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="3"
+                   styleClass="text-field"/>
+
+        <Label text="Производитель:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField fx:id="manufacturerField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="4"
+                   styleClass="text-field"/>
+
+        <Label text="Цена закупки:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <TextField fx:id="purchasePriceField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="5"
+                   styleClass="text-field"/>
+
+        <Label text="Цена продажи:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+        <TextField fx:id="sellingPriceField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="6"
+                   styleClass="text-field"/>
+
+        <Label text="Мин. уровень запаса:" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+        <TextField fx:id="minStockLevelField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="7"
+                   styleClass="text-field"/>
+
+        <Label text="Макс. уровень запаса:" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+        <TextField fx:id="maxStockLevelField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="8"
+                   styleClass="text-field"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER" VBox.vgrow="NEVER" styleClass="buttons-hbox">
+        <Button text="Сохранить"
+                onAction="#handleUpdateProduct"
+                styleClass="dashboard-button"
+                HBox.hgrow="ALWAYS"/>
+
+        <Button text="Отмена"
+                onAction="#closeDialog"
+                styleClass="cancel-button"
+                HBox.hgrow="ALWAYS"/>
+    </HBox>
+</VBox>

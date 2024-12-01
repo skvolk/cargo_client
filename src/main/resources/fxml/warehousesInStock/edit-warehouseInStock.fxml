@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.api.cargosimpleclient.Controllers.WarehousesInStock.EditWarehousesInStockController"
+      alignment="CENTER"
+      styleClass="root">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Редактирование товара на складе" styleClass="title-label"/>
+
+    <GridPane hgap="10" vgap="10" styleClass="grid-pane">
+        <Label text="Id товара:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="productIdField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="0"
+                   styleClass="text-field"
+                   HBox.hgrow="ALWAYS"/>
+
+        <Label text="Id склада:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="warehouseIdField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="1"
+                   styleClass="text-field"/>
+
+        <Label text="Текущее количество:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="currentQuantityField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="2"
+                   styleClass="text-field"/>
+
+        <Label text="Зарезервированное количество:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="reservedQuantityField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="3"
+                   styleClass="text-field"/>
+
+        <Label text="Локация:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField fx:id="locationField"
+                   GridPane.columnIndex="1"
+                   GridPane.rowIndex="4"
+                   styleClass="text-field"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER" VBox.vgrow="NEVER" styleClass="buttons-hbox">
+        <Button text="Сохранить"
+                onAction="#handleUpdateWarehouseInStock"
+                styleClass="dashboard-button"
+                HBox.hgrow="ALWAYS"/>
+
+        <Button text="Отмена"
+                onAction="#closeDialog"
+                styleClass="cancel-button"
+                HBox.hgrow="ALWAYS"/>
+    </HBox>
+</VBox>

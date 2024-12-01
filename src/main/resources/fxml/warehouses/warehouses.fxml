@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.api.cargosimpleclient.Controllers.Warehouses.WarehousesController"
+      alignment="CENTER"
+      spacing="20"
+      styleClass="root"
+      VBox.vgrow="ALWAYS">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <HBox spacing="10" alignment="CENTER" VBox.vgrow="NEVER">
+        <Button text="Об авторе"
+                fx:id="homeButton"
+                onAction="#goToHomePage"
+                styleClass="dashboard-button"
+                HBox.hgrow="ALWAYS"
+                maxWidth="Infinity"/>
+
+        <Button text="Товары"
+                fx:id="productsButton"
+                onAction="#openProductsView"
+                styleClass="dashboard-button"
+                HBox.hgrow="ALWAYS"
+                maxWidth="Infinity"/>
+
+        <Button text="Товары на складах"
+                fx:id="warehouseProductsButton"
+                onAction="#openWarehouseProductsView"
+                styleClass="dashboard-button"
+                HBox.hgrow="ALWAYS"
+                maxWidth="Infinity"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <TextField
+                fx:id="filterTextField"
+                promptText="Быстрый поиск..."
+                HBox.hgrow="ALWAYS"/>
+
+        <Button
+                fx:id="advancedFilterButton"
+                text="Расширенный фильтр"
+                styleClass="dashboard-button"
+                prefWidth="275"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT" VBox.vgrow="ALWAYS">
+        <TableView fx:id="warehousesTable"
+                   HBox.hgrow="ALWAYS"
+                   maxWidth="Infinity"
+                   VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn text="ID" fx:id="idColumn"/>
+                <TableColumn text="Название" fx:id="nameColumn"/>
+                <TableColumn text="Адрес" fx:id="addressColumn"/>
+                <TableColumn text="Контактное лицо" fx:id="contactPersonColumn"/>
+                <TableColumn text="Телефон" fx:id="phoneColumn"/>
+                <TableColumn text="Email" fx:id="emailColumn"/>
+                <TableColumn text="Вместимость" fx:id="capacityColumn"/>
+                <TableColumn text="Статус" fx:id="statusColumn"/>
+            </columns>
+        </TableView>
+
+        <VBox spacing="10"
+              alignment="TOP_CENTER"
+              VBox.vgrow="ALWAYS"
+              prefWidth="275"
+              maxWidth="300">
+            <Button text="Добавить склад"
+                    fx:id="addWarehouseButton"
+                    onAction="#openAddWarehouseDialog"
+                    styleClass="dashboard-button"
+                    maxWidth="Infinity"
+                    VBox.vgrow="NEVER"/>
+            <Button text="Редактировать склад"
+                    fx:id="editWarehouseButton"
+                    onAction="#openEditWarehouseDialog"
+                    styleClass="dashboard-button"
+                    maxWidth="Infinity"
+                    VBox.vgrow="NEVER"/>
+            <Button text="Удалить склад"
+                    fx:id="deleteWarehouseButton"
+                    styleClass="logout-button"
+                    maxWidth="Infinity"
+                    VBox.vgrow="NEVER"/>
+            <Button text="Очистить фильтры"
+                    fx:id="clearFiltersButton"
+                    onAction="#clearFilters"
+                    styleClass="logout-button"
+                    maxWidth="Infinity"
+                    VBox.vgrow="NEVER"/>
+
+            <!-- Контейнер для статистической информации -->
+            <VBox fx:id="statisticsContainer" spacing="5" alignment="TOP_LEFT">
+                <Label fx:id="totalWarehousesLabel" text="Всего складов: 0" styleClass="statistics-label"/>
+                <Label fx:id="activeWarehousesLabel" text="Активных складов: 0" styleClass="statistics-label"/>
+                <Label fx:id="inactiveWarehousesLabel" text="Неактивных складов: 0" styleClass="statistics-label"/>
+                <Label fx:id="totalCapacityLabel" text="Общая вместимость: 0" styleClass="statistics-label"/>
+            </VBox>
+        </VBox>
+    </HBox>
+
+    <Button text="Выход"
+            onAction="#handleLogout"
+            styleClass="logout-button"
+            maxWidth="Infinity"
+            VBox.vgrow="NEVER"/>
+</VBox>

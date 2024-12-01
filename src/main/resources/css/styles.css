@@ -1,0 +1,180 @@
+.root {
+    -fx-background-color: #e9ecef; /* Светлый фон для всего приложения */
+}
+
+.login-form, .register-form, .dashboard {
+    -fx-background-color: white;
+    -fx-background-radius: 15; /* Увеличенный радиус для более мягких углов */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 15, 0, 0, 0); /* Более заметная тень */
+    -fx-padding: 20; /* Добавлено внутреннее отступление */
+}
+
+.text-field, .password-field {
+    -fx-background-radius: 8; /* Более округлые поля */
+    -fx-border-radius: 8;
+    -fx-border-color: #cccccc;
+    -fx-padding: 12px; /* Увеличенные отступы для удобства ввода */
+    -fx-font-size: 14px; /* Увеличенный размер шрифта */
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #4CAF50; /* Цвет рамки при фокусе */
+}
+
+.button {
+    -fx-background-color: #4CAF50; /* Основной цвет кнопки */
+    -fx-text-fill: white;
+    -fx-background-radius: 8; /* Более округлые кнопки */
+    -fx-font-size: 14px; /* Увеличенный размер шрифта */
+    -fx-padding: 10px 20px; /* Увеличенные отступы для кнопок */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 0); /* Легкая тень для кнопок */
+}
+
+.button:hover {
+    -fx-background-color: #45a049; /* Цвет кнопки при наведении */
+}
+
+.secondary-button {
+    -fx-background-color: #f0f0f0; /* Цвет вторичной кнопки */
+    -fx-text-fill: #333;
+    -fx-background-radius: 8; /* Более округлые углы */
+    -fx-padding: 10px 20px; /* Увеличенные отступы */
+}
+
+.secondary-button:hover {
+    -fx-background-color: #e0e0e0; /* Цвет вторичной кнопки при наведении */
+}
+
+.welcome-label {
+    -fx-font-size: 20px; /* Увеличенный размер шрифта */
+    -fx-font-weight: bold;
+    -fx-text-fill: #333; /* Цвет текста */
+    -fx-padding: 10px 0; /* Отступ сверху и снизу */
+}
+
+.logout-button {
+    -fx-background-color: #f44336; /* Цвет кнопки выхода */
+    -fx-text-fill: white;
+    -fx-background-radius: 8; /* Более округлые углы */
+    -fx-padding: 10px 20px; /* Увеличенные отступы */
+}
+
+.logout-button:hover {
+    -fx-background-color: #d32f2f; /* Цвет кнопки выхода при наведении */
+}
+
+.statistics-label {
+    -fx-font-size: 14px; /* Размер шрифта */
+    -fx-text-fill: #333333; /* Цвет текста */
+    -fx-padding: 10px; /* Отступы вокруг текста */
+    -fx-background-color: #f0f0f0; /* Цвет фона */
+    -fx-border-color: #cccccc; /* Цвет границы */
+    -fx-border-width: 1px; /* Ширина границы */
+    -fx-border-radius: 5px; /* Радиус скругления границы */
+    -fx-background-radius: 5px; /* Радиус скругления фона */
+}
+
+/* Добавляем новые стили для EditProductController */
+.title-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-padding: 0 0 20 0;
+}
+
+/* Стили для GridPane */
+.grid-pane {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 15, 0, 0, 0);
+    -fx-padding: 20;
+}
+
+/* Стили для Labels */
+.grid-pane .label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555;
+    -fx-font-weight: bold;
+}
+
+/* Стили для TextField */
+.text-field {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #cccccc;
+    -fx-padding: 12px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused {
+    -fx-border-color: #4CAF50;
+}
+
+/* Стили для кнопок */
+.dashboard-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 0);
+}
+
+.dashboard-button:hover {
+    -fx-background-color: #45a049;
+}
+
+.cancel-button {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+}
+
+.cancel-button:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+/* Стили для HBox с кнопками */
+.buttons-hbox {
+    -fx-padding: 20 0 0 0;
+    -fx-background-color: transparent;
+}
+.form-content {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+}
+
+.form-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #555;
+    -fx-font-weight: bold;
+}
+
+.buttons-container {
+    -fx-padding: 15 0 0 0;
+}
+
+/* Адаптивные стили для мобильности */
+.text-field {
+    -fx-pref-width: 300px; /* Фиксированная ширина полей */
+}
+
+/* Анимация при наведении */
+.text-field:hover {
+    -fx-background-color: #f9f9f9;
+    -fx-transition: background-color 0.3s ease;
+}
+
+/* Стили валидации */
+.text-field.error {
+    -fx-border-color: #f44336;
+    -fx-border-width: 2px;
+}
+
+.text-field.success {
+    -fx-border-color: #4CAF50;
+    -fx-border-width: 2px;
+}

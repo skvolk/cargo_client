@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.ColumnConstraints?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.api.cargosimpleclient.Controllers.DashboardController"
+      alignment="CENTER"
+      spacing="30"
+      styleClass="root"
+      style="-fx-background-color: #f0f4f8;">
+
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+
+    <Label fx:id="welcomeLabel"
+           styleClass="welcome-label"
+           text="Об авторе"
+           style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <GridPane fx:id="topButtonsGrid"
+              hgap="10"
+              vgap="10"
+              alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+    </GridPane>
+
+    <VBox alignment="CENTER" spacing="25" VBox.vgrow="ALWAYS">
+        <Label text="Личная информация"
+               style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #34495e;"/>
+
+        <GridPane hgap="20" vgap="20" alignment="CENTER"
+                  style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 30;">
+            <Label text="ФИО:" GridPane.columnIndex="0" GridPane.rowIndex="0"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <Label text="Ишутин Владислав Александрович"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"
+                   style="-fx-font-size: 20px;"/>
+
+            <Label text="Группа:" GridPane.columnIndex="0" GridPane.rowIndex="1"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <Label text="ПИ22-1в"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"
+                   style="-fx-font-size: 20px;"/>
+
+            <Label text="Курс:" GridPane.columnIndex="0" GridPane.rowIndex="2"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <Label text="3"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"
+                   style="-fx-font-size: 20px;"/>
+
+            <Label text="Контакты:" GridPane.columnIndex="0" GridPane.rowIndex="3"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <Label text="222770@edu.fa.ru"
+                   GridPane.columnIndex="1" GridPane.rowIndex="3"
+                   style="-fx-font-size: 20px;"/>
+        </GridPane>
+
+        <VBox alignment="CENTER" spacing="15"
+              style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 30;">
+            <Label text="Информационная система управления запасами на складе"
+                   style="-fx-font-size: 22px; -fx-text-alignment: center; -fx-font-weight: bold;"/>
+            <Label text="Год разработки: 2024"
+                   style="-fx-font-size: 20px;"/>
+            <Label text="Назначение: Автоматизация учета и управления товарами на складах"
+                   style="-fx-font-size: 20px; -fx-text-alignment: center;"/>
+        </VBox>
+    </VBox>
+
+    <GridPane fx:id="logoutGrid"
+              hgap="10"
+              vgap="10"
+              alignment="CENTER"/>
+</VBox>
